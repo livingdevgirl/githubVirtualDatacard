@@ -19,24 +19,25 @@ function reqListener () {
   // farRight.appendChild(img);
   // img.setAttribute("src", `${data.avatar_url}`)
 infoText.innerHTML =`<header>
-    <h1>${data.name}</h1>
+    <div class="titleName"><h1>living dev girl</h1></div>
+    <div class="zigzag"></div>
   </header>
-  <div class="information">
 
+  <div class="information">
     <section class="leftInfo">
       <h3>The Basics</h3>
       <ul>
-        <li id="name">name: ${data.name}</li>
-        <li> Github URL:<a id="githubURL" href=${data.url}>${data.login}</a></li>
-        <li id="email">email:${data.email}</li>
-        <li>companyName:${data.company}</li>
-        <li>website:<a href="#" id="website">${data.website}</a></li>
+        <li id="name"><p>name:</p> ${data.name}</li>
+        <li> <p>Github URL:</p><a id="githubURL" href=${data.url}>${data.login}</a></li>
+        <li id="email"><p>email:</p>${data.email}</li>
+        <li><p>companyName:</p>${data.company}</li>
+        <li><p>website:</p><a href=${data.website} id="website">${data.website}</a></li>
       </ul>
     </section>
 
     <section class="farRight">
       <h3>The Story</h3>
-      <p>gotta put some info in here for whatever reason</p>
+      <p>${data.bio}</p>
     </section>
     <img class="avatarImage" src=${data.avatar_url}></img>
   </div>`;
